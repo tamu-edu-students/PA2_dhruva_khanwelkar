@@ -23,5 +23,6 @@ module Rottenpotatoes
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.session_store :cookie_store, key: "_dk_container_session"
   end
 end
