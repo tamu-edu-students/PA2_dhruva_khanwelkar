@@ -1,10 +1,26 @@
 <p style="color: green"><%= notice %></p>
 
+<div style="display:flex; flex-direction:column; width:40%; height: 80vh">
 <%= render @movie %>
 
-<div>
-  <%= link_to "Edit this movie", edit_movie_path(@movie,sort: params[:sort], direction: params[:direction]) %> |
-  <%= link_to "Back to movies", movies_path(sort: params[:sort], direction: params[:direction]) %>
+<div style="display:flex; flex-direction:row; justify-content:center; align-items:center; padding:10px; width:100%; gap: 5px">
+  <%= form_with url: edit_movie_path(@movie,sort: params[:sort], direction: params[:direction]), method: :get do %>
+  <%= hidden_field_tag :sort, params[:sort] %>
+  <%= hidden_field_tag :direction, params[:direction] %>
+  <%= submit_tag 'Edit this movie',name: nil, class: 'btn btn-primary' %>
+<% end %>
+<%= form_with url: movies_path(sort: params[:sort], direction: params[:direction]), method: :get do %>
+  <%= hidden_field_tag :sort, params[:sort] %>
+  <%= hidden_field_tag :direction, params[:direction] %>
+  <%= submit_tag "Back to movies",name: nil, class: 'btn btn-primary' %>
+<% end %>
+<%= form_with url: movie_path(@movie), method: :delete do %>
+  <%= hidden_field_tag :sort, params[:sort] %>
+  <%= hidden_field_tag :direction, params[:direction] %>
+  <%= submit_tag "Destroy this movie",name: nil, class: 'btn btn-danger', data: { confirm: "Are you sure?" } %>
+<% end %>
+ 
 
-  <%= button_to "Destroy this movie", @movie, method: :delete %>
 </div>
+</div>
+

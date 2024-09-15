@@ -4,11 +4,11 @@
 
 <h1>Movies</h1>
 
-<div id="movies">
+<div id="movies" class="table-container">
     <table>
       <thead>
       <tr>
-        <th><%= sortable("title", "Title") %></th>
+        <th ><%= sortable("title", "Title")%></th>
         <th><%= sortable("rating", "Rating") %></th>
         <th><%= sortable("release_date", "Release Date") %></th>
         <th></th>
@@ -32,4 +32,12 @@
     
 </div>
 
-<%= link_to "New movie", new_movie_path(sort: params[:sort], direction: params[:direction]) %>
+<%# <button>
+<%= link_to "New movie", new_movie_path(sort: params[:sort], direction: params[:direction]) 
+</button> %>
+
+<%= form_with url: new_movie_path(sort: params[:sort], direction: params[:direction]), method: :get do %>
+  <%= hidden_field_tag :sort, params[:sort] %>
+  <%= hidden_field_tag :direction, params[:direction] %>
+  <%= submit_tag 'New Movie', name: nil,class: 'btn btn-primary' %>
+<% end %>
