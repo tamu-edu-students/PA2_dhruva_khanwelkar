@@ -1,9 +1,9 @@
 .table-container {
     width: 100%;
-    max-width: 1200px; /* Adjust as needed */
+    max-width: 1200px; 
     margin: 0 auto;
-    padding: 20px; /* Optional: adds spacing around the table */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds shadow to the table container */
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   }
   
   table {
@@ -14,12 +14,12 @@
   
   th, td {
     padding: 12px;
-    text-align: left; /* Align text within table cells */
-    border: 1px solid #ddd; /* Optional: adds border to table cells */
+    text-align: left; 
+    border: 1px solid #ddd; 
   }
   
   th {
-    background-color: #333; /* Optional: set header background color */
-    color: white; /* Optional: set header text color */
+    background-color: #333; 
+    color: white; 
   }
   

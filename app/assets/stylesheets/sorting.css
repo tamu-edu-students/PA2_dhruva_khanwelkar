@@ -1,12 +1,11 @@
 .sorted-asc {
-    background-color: #d0f0c0; /* Light green for ascending */
+    background-color: #d0f0c0; 
   }
   
   .sorted-desc {
-    background-color: #f0d0c0; /* Light pink for descending */
+    background-color: #f0d0c0; 
   }
   
-  /* Symbol for screen readers */
   .sorted-symbol {
     display: inline-block;
     font-size: 0.75em;

@@ -12,7 +12,7 @@ button {
     font-size: 16px;
     font-weight: bold;
     color: black;
-    background-color: #e3e3e3; /* Blue background */
+    background-color: #e3e3e3; 
     border: none;
     border-radius: 5px;
     text-align: center;
@@ -21,7 +21,7 @@ button {
   }
   
   .btn:hover {
-    background-color: #59595c; /* Darker blue on hover */
+    background-color: #59595c; 
     color:white
   }
 
